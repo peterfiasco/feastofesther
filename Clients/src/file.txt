@@ -1,0 +1,279 @@
+// import { React } from "react";
+// import { Navbar, Nav, Container } from "react-bootstrap";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "./NavBar.css";
+// import logo from "../Images/FEASTOFESTHERIMAGES/logo.jpeg";
+// import { Link } from "react-router-dom";
+// const NavigationBar = () => {
+//   return (
+//     <>
+//       <div fluid className=" sticky-top" sticky="top">
+//         <Container>
+//           <Navbar
+//             expand="lg"
+//             variant="light"
+//             className="nav has-sticky sticky-jump"
+//             sticky="top"
+//           >
+//             <Navbar.Brand>
+//               <img
+//                 src={logo}
+//                 width="60"
+//                 height="60"
+//                 className="d-inline-block align-top rounded-pill board"
+//                 alt="Logo"
+//               />
+//             </Navbar.Brand>
+//             <p className="feel">Feast Of Esther NA</p>
+//             <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//             <Navbar.Collapse id="basic-navbar-nav">
+//               <Nav className="mr-auto navs">
+               
+//                 <Link to={"/"} className="name">
+//                   <Nav.Link href="/" className="ink">
+//                     Home
+//                   </Nav.Link>
+//                 </Link>
+                
+//                 <Link to={"/about"} className="name">
+//                   <Nav.Link href="/about" className="ink">
+//                     About Us
+//                   </Nav.Link>
+//                 </Link>
+                
+//                 <Link to={"/founder"} className="name">
+//                   <Nav.Link href="/founder" className="ink">
+//                     The Founder
+//                   </Nav.Link>
+//                 </Link>
+                
+//                 <Link to={"/events"} className="name">
+//                   <Nav.Link href="/events" className="ink">
+//                     Events
+//                   </Nav.Link>
+//                 </Link>
+                
+
+//                 <Link to={"/registration"} className="name">
+//                   <Nav.Link href="/registration" className="ink">
+//                     Registration Form
+//                   </Nav.Link>
+//                 </Link>
+               
+//                 <Link to={"/donate"} className="name">
+//                   <Nav.Link href="/donate" className="ink">
+//                     Donate
+//                   </Nav.Link>
+//                 </Link>
+               
+//                 <Link to={"/contact"} className="name">
+//                   <Nav.Link href="/contact" className="ink">
+//                     Contact
+//                   </Nav.Link>
+//                 </Link>
+//               </Nav>
+//             </Navbar.Collapse>
+//           </Navbar>
+//         </Container>
+//       </div>
+ 
+//     </>
+//   );
+// };
+
+// export default NavigationBar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+//           <Row>
+//             <Col sm={12} md={6} className="pick">
+//               <Form.Group controlId="formEmail">
+//                 <Form.Label>Email</Form.Label>
+//                 <Form.Control
+//                   type="email"
+//                   name="email"
+//                   style={{ width: "100%" }}
+//                   value={formData.email}
+//                   onChange={handleChange}
+//                 />
+//               </Form.Group>
+//             </Col>
+//             <Col sm={12} md={6} className="pick">
+//               <Form.Group controlId="formPhoneNumber">
+//                 <Form.Label>Phone Number</Form.Label>
+//                 <Form.Control
+//                   type="text"
+//                   name="phoneNumber"
+//                   style={{ width: "100%" }}
+//                   value={formData.phoneNumber}
+//                   onChange={handleChange}
+//                 />
+//               </Form.Group>
+//             </Col>
+//           </Row>
+//           <Row>
+//             <Col sm={12} md={6} className="pick">
+//               <Form.Group controlId="formAddress">
+//                 <Form.Label>Street Address</Form.Label>
+//                 <Form.Control
+//                   type="text"
+//                   name="streetAddress"
+//                   style={{ width: "100%" }}
+//                   value={formData.streetAddress}
+//                   onChange={handleChange}
+//                 />
+//               </Form.Group>
+//             </Col>
+//             <Col sm={12} md={6} className="pick">
+//               <Form.Group controlId="formApartment">
+//                 <Form.Label>Apartment</Form.Label>
+//                 <Form.Control
+//                   type="text"
+//                   name="apartment"
+//                   style={{ width: "100%" }}
+//                   value={formData.apartment}
+//                   onChange={handleChange}
+//                 />
+//               </Form.Group>
+//             </Col>
+//           </Row>
+
+//           <Row>
+//             <Col sm={12} md={6} className="pick">
+//               <Form.Group controlId="formCity">
+//                 <Form.Label>City</Form.Label>
+//                 <Form.Control
+//                   type="text"
+//                   name="city"
+//                   style={{ width: "100%" }}
+//                   value={formData.city}
+//                   onChange={handleChange}
+//                 />
+//               </Form.Group>
+//             </Col>
+//             <Col sm={12} md={6} className="pick">
+//               <Form.Group controlId="formZipCode">
+//                 <Form.Label>ZIP/Postal Code</Form.Label>
+//                 <Form.Control
+//                   type="text"
+//                   name="postalCode"
+//                   style={{ width: "100%" }}
+//                   value={formData.postalCode}
+//                   onChange={handleChange}
+//                 />
+//               </Form.Group>
+//             </Col>
+//           </Row>
+
+//           <Row>
+//             <Col sm={12} md={6} className="pick">
+//               <Form.Group controlId="formCountry">
+//                 <Form.Label>Country</Form.Label>
+//                 <Form.Control
+//                   as="select"
+//                   style={{ width: "100%" }}
+//                   name="country"
+//                   value={formData.country}
+//                   onChange={handleChange}
+//                 >
+//                   {countries.map((country) => (
+//                     <option key={country} value={country}>
+//                       {country}
+//                     </option>
+//                   ))}
+//                 </Form.Control>
+//               </Form.Group>
+//             </Col>
+//             <Col sm={12} md={6} className="pick">
+//               <Form.Group controlId="formChurchName">
+//                 <Form.Label>Name of Church</Form.Label>
+//                 <Form.Control
+//                   type="text"
+//                   name="churchName"
+//                   style={{ width: "100%" }}
+//                   value={formData.churchName}
+//                   onChange={handleChange}
+//                 />
+//               </Form.Group>
+//             </Col>
+//           </Row>
+
+//           <Row>
+//             <Col sm={12} md={6} className="pick">
+//               <Form.Group controlId="formMinistryPosition">
+//                 <Form.Label>Position in Ministry</Form.Label>
+//                 <Form.Control
+//                   type="text"
+//                   name="ministryPosition"
+//                   style={{ width: "100%" }}
+//                   value={formData.ministryPosition}
+//                   onChange={handleChange}
+//                 />
+//               </Form.Group>
+//             </Col>
+//             <Col sm={12} md={6} className="pick">
+//               <Form.Group controlId="formOfficeTitle">
+//                 <Form.Label>Title of Office</Form.Label>
+//                 <Form.Control
+//                   type="text"
+//                   name="officeTitle"
+//                   style={{ width: "100%" }}
+//                   value={formData.officeTitle}
+//                   onChange={handleChange}
+//                 />
+//               </Form.Group>
+//             </Col>
+//           </Row>
+//           <Row>
+//             <Col sm={12} md={6} className="pick">
+//               <Form.Group controlId="formHusbandsName">
+//                 <Form.Label>Husband's Name</Form.Label>
+//                 <Form.Control
+//                   type="text"
+//                   name="husbandsName"
+//                   style={{ width: "100%" }}
+//                   value={formData.husbandsName}
+//                   onChange={handleChange}
+//                 />
+//               </Form.Group>
+//             </Col>
+//             <Col sm={12} md={6} className="pick">
+//               <Form.Group controlId="formTShirtSize">
+//                 <Form.Label>T-Shirt Size</Form.Label>
+//                 <Form.Control
+//                   as="select"
+//                   style={{ width: "100%" }}
+//                   name="tShirtSize"
+//                   value={formData.tShirtSize}
+//                   onChange={handleChange}
+//                 >
+//                   {TShirt.map((tShirtSize, index) => (
+//                     <option key={index} value={tShirtSize}>
+//                       {tShirtSize}
+//                     </option>
+//                   ))}
+//                 </Form.Control>
+//               </Form.Group>
+//             </Col>
+//           </Row>

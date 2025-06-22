@@ -1,0 +1,654 @@
+/* Main container */
+.event-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.event-form {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  overflow: hidden;
+}
+
+/* Form header */
+.form-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-header h2 {
+  color: #c80e91;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.form-header-underline {
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(to right, #c80e91, #ff6ec4);
+  margin: 0 auto;
+}
+
+/* Form layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  position: relative;
+}
+
+/* Make theme and venue fields span full width */
+.form-group:nth-child(2),
+.form-group:nth-child(4),
+.file-upload-group {
+  grid-column: span 2;
+}
+
+/* Floating labels and inputs */
+.floating-label {
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  color: #666;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transform-origin: left top;
+  z-index: 1;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 18px 15px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #333;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: #c80e91;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(200, 14, 145, 0.1);
+}
+
+input.error, textarea.error {
+  border-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.05);
+}
+
+input.error:focus, textarea.error:focus {
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  padding-left: 5px;
+  overflow: hidden;
+}
+
+/* File upload styling */
+.file-upload-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border: 2px dashed #ddd;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+.file-upload-container:hover {
+  border-color: #c80e91;
+  background: rgba(200, 14, 145, 0.03);
+}
+
+.file-upload-container.error {
+  border-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.05);
+}
+/* Hotel Accommodation Section */
+.hotel-accommodation-section {
+  padding: 6rem 0;
+  background-color: #f9f7f4;
+  position: relative;
+  overflow: hidden;
+}
+
+.hotel-accommodation-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0.01) 100%);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  z-index: 1;
+}
+
+.elegant-divider {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.divider-icon {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #d4af37;
+  position: relative;
+}
+
+.divider-icon::before,
+.divider-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 1px;
+  background: rgba(212, 175, 55, 0.4);
+}
+
+.divider-icon::before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.divider-icon::after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.accommodation-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.accommodation-subtitle {
+  font-size: 1.2rem;
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hotel-showcase {
+  position: relative;
+  z-index: 2;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.hotel-presentation {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px 0 0 8px;
+}
+
+.hotel-image-wrapper {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hotel-showcase-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.hotel-presentation:hover .hotel-showcase-image {
+  transform: scale(1.05);
+}
+
+.hotel-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+}
+
+.hotel-brand-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: #333;
+  padding: 8px 15px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-gallery-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.indicator {
+  width: 30px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+}
+
+.indicator.active {
+  background-color: white;
+}
+
+.hotel-information {
+  height: 100%;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-name-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.hotel-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.hotel-location {
+  display: block;
+  color: #d4af37;
+  font-size: 1.5rem;
+}
+
+.hotel-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.star {
+  color: #d4af37;
+  margin-right: 2px;
+}
+
+.star-empty {
+  color: #e0e0e0;
+}
+
+.rating-text {
+  margin-left: 10px;
+  font-size: 0.9rem;
+  color: #666;
+  padding: 4px 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.hotel-address {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.address-icon {
+  color: #d4af37;
+  margin-right: 12px;
+  margin-top: 4px;
+}
+
+.address-text {
+  color: #555;
+  line-height: 1.6;
+}
+
+.hotel-amenities {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+}
+
+.amenity-icon {
+  color: #d4af37;
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.amenity-text {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.reservation-notice {
+  padding: 15px;
+  background-color: #faf8f3;
+  border-left: 3px solid #d4af37;
+  margin-bottom: 1.5rem;
+}
+
+.reservation-notice p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.book-hotel-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 12px 20px;
+  background: linear-gradient(to right, #d4af37, #f2d77e);
+  color: #333;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.book-hotel-button:hover {
+  background: linear-gradient(to right, #c49f30, #e4ca71);
+  color: #333;
+  text-decoration: none;
+}
+
+.button-icon {
+  margin-left: 8px;
+}
+
+.copy-booking-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  background-color: transparent;
+  color: #666;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #d4af37;
+  transition: all 0.3s ease;
+}
+
+.copy-booking-link:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+  color: #333;
+}
+
+.copy-icon {
+  margin-right: 8px;
+}
+
+/* Toast Container */
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.toast-container .toast {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+@media (max-width: 991px) {
+  .hotel-presentation {
+    border-radius: 8px 8px 0 0;
+    height: 300px;
+  }
+  
+  .hotel-information {
+    padding: 1.5rem;
+  }
+  
+  .hotel-amenities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .accommodation-title {
+    font-size: 2.2rem;
+  }
+  
+  .hotel-amenities {
+    grid-template-columns: 1fr;
+  }
+  
+  .booking-actions {
+    flex-direction: column;
+  }
+}
+
+.file-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: -1;
+}
+
+.file-upload-label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+}
+
+.upload-icon {
+  width: 50px;
+  height: 50px;
+  color: #c80e91;
+  margin-bottom: 15px;
+}
+
+.upload-hint {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 8px;
+}
+
+.file-preview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.file-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.preview-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.file-preview:hover .preview-overlay {
+  opacity: 1;
+}
+
+/* Submit button */
+.submit-button {
+  background: linear-gradient(to right, #c80e91, #ff6ec4);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  min-width: 200px;
+  box-shadow: 0 5px 15px rgba(200, 14, 145, 0.3);
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  box-shadow: 0 8px 20px rgba(200, 14, 145, 0.4);
+  transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .event-form {
+    padding: 30px;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .form-group:nth-child(2),
+  .form-group:nth-child(4),
+  .file-upload-group {
+    grid-column: span 1;
+  }
+  
+  .form-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-form {
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .form-header {
+    margin-bottom: 30px;
+  }
+  
+  .form-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  input, textarea {
+    padding: 15px 12px;
+    font-size: 0.95rem;
+  }
+  
+  .floating-label {
+    font-size: 0.95rem;
+  }
+  
+  .file-upload-container {
+    height: 160px;
+  }
+  
+  .submit-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    min-width: 180px;
+  }
+}

@@ -1,0 +1,71 @@
+import React, { useEffect, useState } from 'react';
+import { Container, Alert } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
+import axios from 'axios';
+
+const RegistrationSuccess = () => {
+  const [status, setStatus] = useState('loading');
+  const location = useLocation();
+  
+  useEffect(() => {
+    const verifyPayment = async () => {
+      const queryParams = new URLSearchParams(location.search);
+      const sessionId = queryParams.get('session_id');
+      
+      if (!sessionId) {
+        setStatus('error');
+        return;
+      }
+      
+      try {
+        // Verify the payment was successful
+        const response = await axios.get(
+          `https://feastofestherna.com/api/v1/stripe/verify-session?sessionId=${sessionId}`
+        );
+        
+        if (response.data.success) {
+          setStatus('success');
+        } else {
+          setStatus('error');
+        }
+      } catch (error) {
+        console.error('Error verifying payment:', error);
+        setStatus('error');
+      }
+    };
+    
+    verifyPayment();
+  }, [location]);
+  
+  return (
+    <Container className="py-5">
+      <div className="text-center">
+        <h1 className="mb-4">Registration Status</h1>
+        
+        {status === 'loading' && (
+          <Alert variant="info">
+            Verifying your registration...
+          </Alert>
+        )}
+        
+        {status === 'success' && (
+          <Alert variant="success">
+            <h4>Registration Complete!</h4>
+            <p>Thank you for registering for the Feast of Esther 2025. Your payment has been processed successfully.</p>
+            <p>You will receive a confirmation email shortly with more details.</p>
+          </Alert>
+        )}
+        
+        {status === 'error' && (
+          <Alert variant="danger">
+            <h4>Registration Error</h4>
+            <p>There was a problem with your registration or payment verification.</p>
+            <p>Please contact support for assistance.</p>
+          </Alert>
+        )}
+      </div>
+    </Container>
+  );
+};
+
+export default RegistrationSuccess;

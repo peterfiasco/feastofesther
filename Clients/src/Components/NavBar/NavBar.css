@@ -1,0 +1,76 @@
+.nav.has-sticky.sticky-jump {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+.nav {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navs {
+  margin: auto;
+}
+
+.board {
+  border: 5px solid rgb(200, 14, 145);
+}
+
+.feast {
+  display: inline;
+  margin-top: 10px;
+  font-weight: bold;
+  color: rgb(200, 14, 145);
+  font-size: 20px;
+}
+
+.feel {
+  color: rgb(200, 14, 145);
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: rgb(200, 14, 145);
+  /* Change text color for links */
+}
+
+.nav-link:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(238, 83, 158),
+    rgb(163, 26, 106)
+  );
+  color: white;
+  transition: all 0.3s ease-in-out;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    background-image: linear-gradient(
+      to right,
+      rgb(238, 83, 158),
+      rgb(163, 26, 106)
+    );
+  }
+  to {
+    background-image: linear-gradient(
+      to right,
+      rgb(163, 26, 106),
+      rgb(238, 83, 158)
+    );
+  }
+}
+
+.navbar-nav .nav-link.active {
+  background-color: rgb(163, 26, 106);
+  color: white;
+  border-radius: 10px;
+}
+
+.name {
+  text-decoration: none;
+}

@@ -1,0 +1,420 @@
+
+/* Hero section with footer text container */
+.founder-hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 6s ease-out;
+}
+
+.founder-hero:hover .hero-background img {
+  transform: scale(1);
+}
+
+/* Footer text container */
+.hero-footer-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.6) 80%, transparent);
+  padding: 4rem 0 2rem;
+}
+
+.hero-footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  color: #fff;
+}
+
+.hero-title-area {
+  flex: 0 0 45%;
+}
+
+.title-badge {
+  display: inline-block;
+  background: #f8d56b;
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.2rem;
+}
+
+.hero-title-area h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #fff, #f8d56b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-accent {
+  width: 100px;
+  height: 3px;
+  background: #f8d56b;
+}
+
+.hero-description-area {
+  flex: 0 0 45%;
+  border-left: 2px solid rgba(248, 213, 107, 0.4);
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-description-area p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.explore-link {
+  display: flex;
+  align-items: center;
+  color: #f8d56b;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.explore-link:hover {
+  color: #fff;
+}
+
+.arrow-right {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.explore-link:hover .arrow-right {
+  transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-footer-content {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+  
+  .hero-title-area, .hero-description-area {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  
+  .hero-title-area h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-description-area {
+    border-left: none;
+    border-top: 2px solid rgba(248, 213, 107, 0.4);
+    padding-left: 0;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-footer-container {
+    padding: 2.5rem 0 1.5rem;
+  }
+  
+  .hero-footer-content {
+    padding: 0 1.5rem;
+  }
+  
+  .hero-title-area h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-description-area p {
+    font-size: 1rem;
+  }
+  
+  .title-badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(79, 20, 67, 0.105), rgba(70, 6, 90, 0.7));
+}
+
+
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* Biography Section */
+.founder-biography {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  font-size: 2.5rem;
+  color: #8a1372;
+  margin-bottom: 15px;
+}
+
+.heading-underline {
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(to right, #8a1372, #d147b9);
+  margin: 0 auto;
+}
+
+.biography-content {
+  margin-top: 30px;
+}
+
+.biography-text {
+  padding: 0 20px;
+}
+
+.biography-text p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover .profile-image {
+  transform: scale(1.05);
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(138, 19, 114, 0.8);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-weight: 500;
+}
+
+/* Legacy Section */
+.founder-legacy {
+  padding: 80px 0;
+  background-color: #f9f5fa;
+}
+
+.legacy-portrait {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.portrait-container {
+  display: inline-block;
+  position: relative;
+}
+
+.portrait-container img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid #8a1372;
+  box-shadow: 0 0 0 5px rgba(138, 19, 114, 0.2);
+}
+
+.legacy-cards {
+  margin-top: 40px;
+}
+
+.legacy-card {
+  height: 100%;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  color: #8a1372;
+  margin-bottom: 15px;
+}
+
+.card-divider {
+  height: 2px;
+  width: 40px;
+  background: linear-gradient(to right, #8a1372, #d147b9);
+  margin-bottom: 15px;
+}
+
+.legacy-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto; /* ensure content is centered */
+  text-align: center; /* ensure text alignment */
+}
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .biography-image {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .founder-biography,
+  .founder-legacy {
+    padding: 50px 0;
+  }
+  
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+  
+  .biography-text p {
+    font-size: 1rem;
+  }
+  
+  .legacy-portrait {
+    margin-bottom: 30px;
+  }
+  
+  .portrait-container img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content {
+    width: 90%;
+    padding: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .title-accent {
+    margin: 15px auto;
+  }
+  
+  .section-heading {
+    margin-bottom: 30px;
+  }
+  
+  .section-heading h2 {
+    font-size: 1.8rem;
+  }
+  
+  .biography-text {
+    padding: 0 10px;
+  }
+  
+  .portrait-container img {
+    width: 120px;
+    height: 120px;
+    border-width: 6px;
+  }
+  
+  .legacy-card {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,38 @@
+.form {
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(253, 253, 253);
+  /* background-color: rgb(238, 83, 158); */
+  margin: 30px 15px 5px 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.select {
+  margin-left: 290px;
+}
+
+.pick label {
+  margin-top: 10px;
+  font-size: 19px;
+  color: rgb(200, 14, 145);
+}
+.pick input {
+  margin-top: 7px;
+}
+.form h2 {
+  font-size: 40px;
+  color: White;
+  font-weight: bold;
+}
+.btn {
+  /* background-color: rgb(255, 253, 255);
+    color: rgb(209, 33, 153); */
+  font-weight: 700;
+  font-size: 20px;
+  width: 25%;
+  margin-top: 40px;
+  border: none;
+}
+.btn:hover {
+  color: rgb(238, 83, 158);
+  background-color: white;
+}

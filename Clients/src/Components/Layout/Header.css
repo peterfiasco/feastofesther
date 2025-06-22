@@ -1,0 +1,21 @@
+*, :after, :before, html {
+    box-sizing: border-box;
+}
+/* .header {
+  background-position: 50% 0;
+  background-size: cover;
+  position: relative;
+  transition: background-color 0.3s, opacity 0.3s;
+  width: 100%;
+  z-index: 1001;
+} */
+
+.has-sticky {
+  position: sticky;
+  top: 20px; 
+}
+
+.sticky-jump {
+    animation: stuckMoveDown .6s;
+}
+
